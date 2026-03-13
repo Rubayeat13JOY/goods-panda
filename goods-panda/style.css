@@ -1,0 +1,214 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+.menu-icon span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 0;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: #fceae8;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    padding: 60px;
+    margin-bottom: 50px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.price {
+    color: #FF136F;
+    font-size: 2.5rem;
+    margin: 20px 0;
+}
+
+.buy-now-btn {
+    background-image: linear-gradient(to bottom, #FF589B, #FF136F);
+    color: white;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: right;
+}
+
+.hero-image img {
+    max-width: 100%;
+}
+
+/* Categories */
+.section-title {
+    margin: 40px 0 25px;
+    font-size: 1.8rem;
+}
+
+.category-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.category-card {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    border-radius: 12px;
+    color: white;
+}
+
+.cat-watch { background-color: #FFA500; }
+.cat-bag { background-color: #D63384; }
+.cat-shoes { background-color: #0000FF; }
+
+.category-card img { height: 80px; }
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.product-card {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+}
+
+.product-card img {
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+
+.product-info h3 { margin-bottom: 10px; }
+.product-info p { color: #6c757d; font-size: 0.9rem; }
+.product-info h4 { margin: 15px 0; font-size: 1.5rem; }
+
+.buy-dark-btn {
+    background-color: #000;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Newsletter */
+.newsletter-section {
+    background-color: #fceae8;
+    height: 350px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 80px auto;
+}
+
+.subscribe-form {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.subscribe-form input {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    width: 300px;
+}
+
+.subscribe-form button {
+    background-image: linear-gradient(to bottom, #FF589B, #FF136F);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+/* --- Responsive Media Queries --- */
+
+/* Laptop (max-width: 1200px) */
+@media (max-width: 1200px) {
+    .hero-content h1 { font-size: 2.5rem; }
+}
+
+/* Tablet (max-width: 992px) */
+@media (max-width: 992px) {
+    .hero-section { flex-direction: column; text-align: center; padding: 40px; }
+    .hero-image { text-align: center; margin-top: 30px; }
+    
+    .category-wrapper { flex-wrap: wrap; }
+    .category-card { min-width: 45%; }
+    
+    .product-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* Mobile (max-width: 640px) */
+@media (max-width: 640px) {
+    .category-card { 
+        min-width: 100%; 
+        flex-direction: column; 
+        text-align: center; 
+    }
+    
+    .product-grid { grid-template-columns: 1fr; }
+    
+    .subscribe-form { flex-direction: column; gap: 10px; width: 100%; }
+    .subscribe-form input { width: 100%; border-radius: 5px; }
+    .subscribe-form button { border-radius: 5px; }
+    
+    .hero-content h1 { font-size: 2rem; }
+}
+
+/* Small Devices (down to 320px) */
+@media (max-width: 320px) {
+    .container { padding: 0 10px; }
+    .hero-content h1 { font-size: 1.5rem; }
+}
